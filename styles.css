@@ -4,6 +4,7 @@
   --btncolor: #fff;
   --btnplaybg: green;
   --btnresetbg: orange;
+  --btnpausebg: red;
 }
 
 *, *::before, *::after {
@@ -63,6 +64,10 @@ button i, i::before {
 
 #play {
   background-color: var(--btnplaybg);
+}
+
+#pause {
+  background-color: var(--btnpausebg);
 }
 
 #reset {
