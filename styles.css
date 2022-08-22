@@ -1,14 +1,70 @@
 :root {
-  --tempbg: #aeaeae;  
+  --tempbg: #aeaeae;
+  --containerbg: #eaeaea;
+  --btncolor: #fff;
+  --btnplaybg: green;
+  --btnresetbg: orange;
 }
 
 *, *::before, *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-size: 1rem;
+  /* figure out common font-family such as icons will be correct */
 }
 
 body {
   height: 100vh;
   background-color: var(--tempbg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 52%;
+  max-width: 333px; 
+  background-color: var(--containerbg);
+  border-radius: 15px;
+}
+
+#timer {
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 1rem;
+  padding: 7px;
+}
+
+#buttons {
+  /* display: flex; */
+  /* flex-direction: row;
+  justify-content: space-evenly;   */
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+button {
+  border: none;
+  margin: 0.85rem;   
+}
+
+
+/* !!! using pseudo-selector necessary to apply font-size!!! 
+!!! to make buttons equal size width goes here!!! in icon, not in button*/
+button i, i::before {  
+  font-size: 2rem;
+  padding: 3px;
+  color: var(--btncolor); 
+  width: 55px;
+  border-radius: 5px; 
+}
+
+#play {
+  background-color: var(--btnplaybg);
+}
+
+#reset {
+ background-color: var(--btnresetbg);
 }
